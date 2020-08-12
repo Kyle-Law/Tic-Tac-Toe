@@ -6,7 +6,7 @@
 
 ## Live Version
 
-View the live version [HERE](https://rawcdn.githack.com/Kyle-Law/Tic-Tac-Toe/27100dab9ca59bb5a5c1b876fd5e2635fb3b1625/index.html)
+View the live version [HERE](https://rawcdn.githack.com/Kyle-Law/Tic-Tac-Toe/e85970f2a4967eca6915bda3a1739faf3bfb653e/index.html)
 
 ## Built With
 
