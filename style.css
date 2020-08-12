@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+
 *,
 *::before,
 *::after {
@@ -12,17 +14,81 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: whitesmoke;
+}
+
+body,
+input[type="text"],
+button {
+  font-family: Amatic SC, sans-serif;
+  font-size: 30px;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+}
+
+/* Player */
+.player-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-container input,
+.player-container button {
+  padding: 10px;
+  margin: 20px;
+  width: max-content;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.75);
+}
+
+.player-container button {
+  color: white;
+  cursor: pointer;
+  background-color: rgb(255, 4, 4);
+}
+
+.player-container button:hover {
+  filter: brightness(0.9);
+}
+
+.player-container .green {
+  background-color: rgb(4, 255, 4);
+}
+
+/* Board */
+.game-container {
+  display: none;
+}
+
+.game-status {
+  text-align: center;
 }
 
 .board {
-  width: 100vw;
-  height: 100vh;
   display: grid;
   justify-content: center;
   align-content: center;
   justify-items: center;
   align-items: center;
   grid-template-columns: repeat(3, auto);
+}
+
+.showGrid {
+  display: grid;
+}
+
+.displayNone {
+  display: none;
+}
+
+.displayBlock {
+  display: block;
 }
 
 .cell {
@@ -138,12 +204,15 @@ body {
   border: 1px solid black;
   padding: 0.25em 0.5em;
   cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.75);
 }
 
 .winning-message button:hover {
   background-color: black;
   border-color: white;
   color: white;
+  box-shadow: 0px 5px 5px 1px rgba(255, 255, 255, 0.75);
 }
 
 .winning-message.show {
