@@ -9,18 +9,8 @@
   <body>
     <h1>Tic Tac Toe</h1>
     <div class="player-container" id="player-container">
-      <input
-        type="text"
-        id="player1"
-        placeholder="Player 1's Name"
-        onkeyup="handlePlayer1()"
-      />
-      <input
-        type="text"
-        id="player2"
-        placeholder="Player 2's Name"
-        onkeyup="handlePlayer2()"
-      />
+      <input type="text" id="player1" placeholder="Player 1's Name" />
+      <input type="text" id="player2" placeholder="Player 2's Name" />
       <button id="start">Start Game</button>
     </div>
     <div class="game-container" id="game-container">
@@ -42,6 +32,9 @@
       <div data-winning-message-text></div>
       <button id="restartButton">Restart</button>
     </div>
-    <script src="script.js"></script>
+    <script src="/script/player.js"></script>
+    <script src="/script/board.js"></script>
+    <script src="/script/logic.js"></script>
+    <script src="/script/script.js"></script>
   </body>
 </html>

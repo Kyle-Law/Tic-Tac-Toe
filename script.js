@@ -31,6 +31,25 @@ const winningMessageTextElement = document.querySelector(
 );
 const restartButton = document.getElementById("restartButton");
 
+function nameEntered() {
+  return player1.value && player2.value;
+}
+
+function changeStartBtnStatus() {
+  if (nameEntered()) {
+    startBtn.classList.add("green");
+  } else {
+    startBtn.classList.remove("green");
+  }
+}
+function handlePlayer1() {
+  changeStartBtnStatus();
+}
+
+function handlePlayer2() {
+  changeStartBtnStatus();
+}
+
 function setBoardHoverClass() {
   board.classList.remove(X_CLASS);
   board.classList.remove(CIRCLE_CLASS);
@@ -51,20 +70,20 @@ function swapTurns() {
   circleTurn = !circleTurn;
 }
 
+/* eslint max-len: ["error", { "code": 200 }] */
 function checkWin(currentClass) {
-  return WINNING_COMBINATIONS.some((combination) => {
-    return combination.every((index) => {
-      return cellElements[index].classList.contains(currentClass);
-    });
-  });
+  return WINNING_COMBINATIONS.some((combination) =>
+    combination.every((index) =>
+      cellElements[index].classList.contains(currentClass)
+    )
+  );
 }
 
 function isDraw() {
-  return [...cellElements].every((cell) => {
-    return (
+  return [...cellElements].every(
+    (cell) =>
       cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS)
-    );
-  });
+  );
 }
 
 function endGame(draw) {
@@ -93,6 +112,7 @@ function handleClick(e) {
   }
 }
 
+/* eslint-disable no-alert */
 function startGame() {
   if (nameEntered()) {
     gameContainer.classList.add("displayBlock");
@@ -110,26 +130,7 @@ function startGame() {
     alert("Please Enter Player's Name");
   }
 }
-
-function handlePlayer1() {
-  validateName();
-}
-
-function handlePlayer2() {
-  changeStartBtnStatus();
-}
-
-function nameEntered() {
-  return player1.value && player2.value;
-}
-
-function changeStartBtnStatus() {
-  if (nameEntered()) {
-    startBtn.classList.add("green");
-  } else {
-    startBtn.classList.remove("green");
-  }
-}
+/* eslint-enable no-alert */
 
 function restart() {
   gameContainer.classList.remove("displayBlock");
@@ -137,6 +138,7 @@ function restart() {
   winningMessageElement.classList.remove("show");
   player1.value = "";
   player2.value = "";
+  changeStartBtnStatus();
 }
 
 // Event Listeners
@@ -145,5 +147,7 @@ restartButton.addEventListener("click", restart);
 //   console.log(e.target.value);
 // });
 startBtn.addEventListener("click", startGame);
+player1.addEventListener("keyup", handlePlayer1);
+player2.addEventListener("keyup", handlePlayer2);
 
 // startGame();

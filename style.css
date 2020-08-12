@@ -44,17 +44,13 @@ h1 {
   margin: 20px;
   width: max-content;
   border-radius: 5px;
-  box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.75);
 }
 
 .player-container button {
   color: white;
   cursor: pointer;
   background-color: rgb(255, 4, 4);
-}
-
-.player-container button:hover {
-  filter: brightness(0.9);
 }
 
 .player-container .green {
@@ -77,6 +73,13 @@ h1 {
   justify-items: center;
   align-items: center;
   grid-template-columns: repeat(3, auto);
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 20px;
+  width: max-content;
+  margin: 0 auto;
+  box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.75);
 }
 
 .showGrid {
@@ -151,12 +154,12 @@ h1 {
   height: var(--mark-size);
 }
 
-.cell.x:before,
+.cell.x::before,
 .board.x .cell:not(.x):not(.circle):hover::before {
   transform: rotate(45deg);
 }
 
-.cell.x:after,
+.cell.x::after,
 .board.x .cell:not(.x):not(.circle):hover::after {
   transform: rotate(-45deg);
 }
@@ -205,16 +208,20 @@ h1 {
   padding: 0.25em 0.5em;
   cursor: pointer;
   border-radius: 5px;
-  box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.75);
 }
 
 .winning-message button:hover {
   background-color: black;
   border-color: white;
   color: white;
-  box-shadow: 0px 5px 5px 1px rgba(255, 255, 255, 0.75);
+  box-shadow: 0 5px 5px 1px rgba(255, 255, 255, 0.75);
 }
 
 .winning-message.show {
   display: flex;
+}
+
+.player-container button:hover {
+  filter: brightness(0.9);
 }
