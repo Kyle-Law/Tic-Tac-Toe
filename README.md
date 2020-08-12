@@ -1,12 +1,12 @@
-# Title
+# Tic Tac Toe
 
-> Description
+> A Simple Web App for Tic Tac Toe
 
-![image]()
+![image](https://user-images.githubusercontent.com/55923773/90041121-6d7c8300-dcfb-11ea-87cc-8b1992b39f71.png)
 
 ## Live Version
 
-View the live version [HERE]()
+View the live version [HERE](https://rawcdn.githack.com/Kyle-Law/Tic-Tac-Toe/16510a72e390167b62c726b87d5644a405099d5b/index.html)
 
 ## Built With
 
