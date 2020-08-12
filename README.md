@@ -2,7 +2,7 @@
 
 > A Simple Web App for Tic Tac Toe
 
-![image](https://user-images.githubusercontent.com/55923773/90041121-6d7c8300-dcfb-11ea-87cc-8b1992b39f71.png)
+![image](https://user-images.githubusercontent.com/55923773/90041331-bcc2b380-dcfb-11ea-9c75-3ad6726b456c.png)
 
 ## Live Version
 
