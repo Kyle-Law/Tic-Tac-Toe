@@ -1,8 +1,4 @@
-// Board Elements
-const gameContainer = document.getElementById("game-container");
-const board = document.getElementById("board");
-const cellElements = document.querySelectorAll("[data-cell]");
-const gameStatus = document.getElementById("gameStatus");
+/* eslint-disable no-unused-vars,no-undef */
 
 function setBoardHoverClass() {
   board.classList.remove(X_CLASS);

@@ -1,8 +1,4 @@
-// Player Elements
-const playerContainer = document.getElementById("player-container");
-const player1 = document.getElementById("player1");
-const player2 = document.getElementById("player2");
-const startBtn = document.getElementById("start");
+/* eslint-disable no-unused-vars,no-undef */
 
 function nameEntered() {
   return player1.value && player2.value;
@@ -10,15 +6,8 @@ function nameEntered() {
 
 function changeStartBtnStatus() {
   if (nameEntered()) {
-    startBtn.classList.add("green");
+    startBtn.classList.add('green');
   } else {
-    startBtn.classList.remove("green");
+    startBtn.classList.remove('green');
   }
-}
-function handlePlayer1() {
-  changeStartBtnStatus();
-}
-
-function handlePlayer2() {
-  changeStartBtnStatus();
 }
